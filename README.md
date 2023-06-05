@@ -1,2 +1,2 @@
 # miniapps
-miniapps
+composer require fangjia/miniapps
