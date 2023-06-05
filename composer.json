@@ -1,0 +1,21 @@
+{
+    "name": "fangjia/miniapps",
+    "description": "miniapps",
+    "type": "1",
+    "require": {
+        "php": "7.3.33"
+    },
+    "license": "Apache-2.0",
+    "autoload": {
+        "psr-4": {
+            "Fangjia\\Miniapps\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "weijiapc",
+            "email": "weijiapc@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
