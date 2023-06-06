@@ -3,7 +3,9 @@
     "description": "miniapps",
     "type": "1",
     "require": {
-        "php": "7.3.33"
+        "php": ">=7.0",
+      "ext-curl": "*",
+        "ext-json": "*"
     },
     "license": "Apache-2.0",
     "autoload": {
