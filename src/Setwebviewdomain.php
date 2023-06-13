@@ -1,5 +1,6 @@
 <?php
-namespace Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
+
 use Fangjia\Miniapps\Base;
 
 Class Setwebviewdomain extends Base
@@ -16,7 +17,7 @@ Class Setwebviewdomain extends Base
     {
         $params = array("action"=>"set");
 
-        if($this->isNotNull($this->webviewdomain )) {
+        if(isNotNull($this->webviewdomain )) {
             $params['webviewdomain'] = $this->webviewdomain ;
         }
         $this->param_json = $params;

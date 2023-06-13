@@ -1,7 +1,5 @@
 <?php
-namespace Fangjia\Miniapps\Member;
-
-use Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
 
 Class Getprivacysetting extends Base
 {
@@ -17,7 +15,7 @@ Class Getprivacysetting extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->privacy_ver )) {
+        if(isNotNull($this->privacy_ver )) {
             $params['privacy_ver'] = $this->privacy_ver ;
         }
 

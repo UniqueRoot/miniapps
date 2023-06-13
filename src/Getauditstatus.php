@@ -1,6 +1,5 @@
 <?php
-namespace Fangjia\Miniapps\Code;
-use Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
 
 Class Getauditstatus extends Base
 {
@@ -16,7 +15,7 @@ Class Getauditstatus extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->auditid )) {
+        if(isNotNull($this->auditid )) {
             $params['auditid'] = $this->auditid ;
         }
 

@@ -1,7 +1,6 @@
 <?php
-namespace Fangjia\Miniapps\Code;
+namespace Fangjia\Miniapps;
 
-use Fangjia\Miniapps\Base;
 Class Undocodeaudit extends Base
 {
     // API名

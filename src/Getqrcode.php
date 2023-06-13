@@ -1,7 +1,5 @@
 <?php
-namespace Fangjia\Miniapps\Code;
-
-use Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
 
 Class Getqrcode extends Base
 {
@@ -17,7 +15,7 @@ Class Getqrcode extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->path )) {
+        if(isNotNull($this->path )) {
             $params['path'] = $this->path ;
         }
 

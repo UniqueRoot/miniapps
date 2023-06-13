@@ -1,7 +1,10 @@
 <?php
-namespace Fangjia\Miniapps\Code;
-use Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
 
+/**
+ * 上传代码并生成体验版
+ * 文档：https://developers.weixin.qq.com/doc/oplatform/openApi/OpenApiDoc/miniprogram-management/code-management/commit.html
+ */
 Class Commit extends Base
 {
     // API名
@@ -18,19 +21,19 @@ Class Commit extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->template_id )) {
+        if(isNotNull($this->template_id )) {
             $params['template_id'] = $this->template_id ;
         }
 
-        if($this->isNotNull($this->user_version)) {
+        if(isNotNull($this->user_version)) {
             $params['user_version'] = $this->user_version;
         }
 
-        if($this->isNotNull($this->user_desc)) {
+        if(isNotNull($this->user_desc)) {
             $params['user_desc'] = $this->user_desc;
         }
 
-        if($this->isNotNull($this->ext_json)) {
+        if(isNotNull($this->ext_json)) {
             $params['ext_json'] = $this->ext_json;
         }
         $this->param_json = $params;

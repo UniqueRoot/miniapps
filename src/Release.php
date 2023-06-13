@@ -1,7 +1,5 @@
 <?php
-namespace Fangjia\Miniapps\Code;
-
-use Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
 
 Class Release extends Base
 {

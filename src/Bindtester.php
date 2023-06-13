@@ -1,8 +1,10 @@
 <?php
-namespace Fangjia\Miniapps\Member;
+namespace Fangjia\Miniapps;
 
-use Fangjia\Miniapps\Base;
-
+/**
+ *  绑定体验者
+ *  文档： https://developers.weixin.qq.com/doc/oplatform/openApi/OpenApiDoc/miniprogram-management/member-management/bindTester.html
+ */
 Class Bindtester extends Base
 {
     // API名
@@ -16,7 +18,7 @@ Class Bindtester extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->wechatid )) {
+        if(isNotNull($this->wechatid )) {
             $params['wechatid'] = $this->wechatid ;
         }
 

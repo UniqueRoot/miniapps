@@ -1,7 +1,5 @@
 <?php
-namespace Fangjia\Miniapps\Member;
-
-use Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
 
 Class Unbindtester extends Base
 {
@@ -16,7 +14,7 @@ Class Unbindtester extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->wechatid )) {
+        if(isNotNull($this->wechatid )) {
             $params['wechatid'] = $this->wechatid ;
         }
 

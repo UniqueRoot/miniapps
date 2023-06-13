@@ -1,5 +1,5 @@
 <?php
-namespace Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
 
 use Fangjia\Miniapps\Base;
 
@@ -18,19 +18,19 @@ Class Modifydomain extends Base
             $params['action'] = $this->getAction();
         }
 
-        if($this->isNotNull($this->getRequestdomain())) {
+        if(isNotNull($this->getRequestdomain())) {
             $params['requestdomain'] = $this->getRequestdomain() ;
         }
 
-        if($this->isNotNull($this->getWsrequestdomain())) {
+        if(isNotNull($this->getWsrequestdomain())) {
             $params['wsrequestdomain'] = $this->getWsrequestdomain();
         }
 
-        if($this->isNotNull($this->getUploaddomain())) {
+        if(isNotNull($this->getUploaddomain())) {
             $params['uploaddomain'] = $this->getUploaddomain();
         }
 
-        if($this->isNotNull($this->getDownloaddomain())) {
+        if(isNotNull($this->getDownloaddomain())) {
             $params['downloaddomain'] = $this->getDownloaddomain();
         }
         $this->param_json = $params;

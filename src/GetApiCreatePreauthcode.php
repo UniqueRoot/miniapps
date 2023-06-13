@@ -1,8 +1,10 @@
 <?php
-namespace Fangjia\Miniapps\Token;
+namespace Fangjia\Miniapps;
 
-use Fangjia\Miniapps\Base;
-
+/**
+ * 获取预授权码 该接口用于获取预授权码（pre_auth_code）是第三方平台方实现授权托管的必备信息，每个预授权码有效期为 1800秒
+ * 文档：https://developers.weixin.qq.com/doc/oplatform/openApi/OpenApiDoc/ticket-token/getPreAuthCode.html
+ */
 Class GetApiCreatePreauthcode extends Base
 {
     // API名
@@ -14,7 +16,7 @@ Class GetApiCreatePreauthcode extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->component_appid)) {
+        if(isNotNull($this->component_appid)) {
             $params['component_appid'] = $this->component_appid;
         }
 

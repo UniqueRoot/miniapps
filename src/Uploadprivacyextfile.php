@@ -1,6 +1,5 @@
 <?php
-namespace Fangjia\Miniapps\Member;
-use Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
 
 Class Uploadprivacyextfile extends Base
 {
@@ -16,7 +15,7 @@ Class Uploadprivacyextfile extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->file )) {
+        if(isNotNull($this->file )) {
             $params['file'] = $this->file ;
         }
 

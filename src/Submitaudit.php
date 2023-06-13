@@ -1,7 +1,6 @@
 <?php
-namespace Fangjia\Miniapps\Code;
+namespace Fangjia\Miniapps;
 
-use Fangjia\Miniapps\Base;
 Class Submitaudit extends Base
 {
     // API名
@@ -16,11 +15,11 @@ Class Submitaudit extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->feedback_info )) {
+        if(isNotNull($this->feedback_info )) {
             $params['feedback_info'] = $this->feedback_info ;
         }
 
-        if($this->isNotNull($this->feedback_stuff)) {
+        if(isNotNull($this->feedback_stuff)) {
             $params['feedback_stuff'] = $this->feedback_stuff;
         }
 

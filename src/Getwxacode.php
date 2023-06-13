@@ -1,7 +1,5 @@
 <?php
-namespace Fangjia\Miniapps\Qrcode;
-
-use Fangjia\Miniapps\Base;
+namespace Fangjia\Miniapps;
 
 Class Getwxacode extends Base
 {
@@ -20,23 +18,23 @@ Class Getwxacode extends Base
     {
         $params = array();
 
-        if($this->isNotNull($this->path)) {
+        if(isNotNull($this->path)) {
             $params['path'] = $this->path;
         }
 
-        if($this->isNotNull($this->width)) {
+        if(isNotNull($this->width)) {
             $params['width'] = $this->width;
         }
 
-        if($this->isNotNull($this->auto_color)) {
+        if(isNotNull($this->auto_color)) {
             $params['auto_color'] = $this->auto_color;
         }
 
-        if($this->isNotNull($this->line_color)) {
+        if(isNotNull($this->line_color)) {
             $params['line_color'] = $this->line_color;
         }
 
-        if($this->isNotNull($this->is_hyaline)) {
+        if(isNotNull($this->is_hyaline)) {
             $params['is_hyaline'] = $this->is_hyaline;
         }
 
