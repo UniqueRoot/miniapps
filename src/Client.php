@@ -3,6 +3,10 @@ namespace Fangjia\Miniapps;
 
 use Fangjia\Miniapps\Http\Request;
 
+/**
+ * 客户端类
+ * 开发文档：https://developers.weixin.qq.com/doc/oplatform/openApi/OpenApiDoc/
+ */
 class Client extends Base {
 
     /**
@@ -79,9 +83,14 @@ class Client extends Base {
 
     /**
      * 获取授权地址
+     * @param $appId
+     * - 指定授权唯一的小程序或公众号 。
+     * - 如果指定了appid，则只能是该appid的管理员进行授权，其他用户扫码会出现报错。
+     * - auth_type、biz_appid 两个字段如果设置的信息冲突，则biz_appid生效的优先级更高。
+     * - 例如，auth_type=1，但是biz_appid是小程序的appid，则会按照auth_type=2来处理，即以biz_appid的类型为准去拉出来对应的权限集列表
      * @return string
      */
-    public function getAuthorizeUrl()
+    public function getAuthorizeUrl($appId)
     {
         $redirect_uri = str_replace('$APPID$', $this->appId, $this->redirect_uri);
         return "https://mp.weixin.qq.com/safe/bindcomponent?action=bindcomponent&no_scan=1&component_appid={$this->appId}&pre_auth_code={$this->_pre_auth_code}&redirect_uri={$redirect_uri}&auth_type=2&biz_appid={$appId}";
