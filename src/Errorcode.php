@@ -2,11 +2,13 @@
 namespace Fangjia\Miniapps;
 
 /**
- * 审核结果枚举类
+ * 枚举类
  */
 class Errorcode {
 
 
+
+    /** 小程序审核结果 */
     /** 审核成功 */
     const STATUS_SUCCESS = 0;
 

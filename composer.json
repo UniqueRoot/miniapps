@@ -4,14 +4,18 @@
     "type": "1",
     "require": {
         "php": ">=7.0",
-      "ext-curl": "*",
+        "ext-curl": "*",
         "ext-json": "*"
     },
     "license": "Apache-2.0",
     "autoload": {
         "psr-4": {
             "Fangjia\\Miniapps\\": "src/"
-        }
+        },
+        "files": ["src/Common.php"]
+    },
+    "autoload-dev": {
+        "files": ["src/Common.php"]
     },
     "authors": [
         {

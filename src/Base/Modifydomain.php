@@ -10,35 +10,31 @@ Class Modifydomain extends Base
 
     protected $isTrue = true;
 
-    public $requestdomain    = null;
-    public $wsrequestdomain  = null;
-    public $uploaddomain     = null;
-    public $downloaddomain   = null;
-    public $action           = null;
-
     protected function buildParams()
     {
         $params = array();
 
-        if($this->isNotNull($this->action)) {
-            $params['action'] = $this->action ;
+        if(isNotNull($this->getAction())) {
+            $params['action'] = $this->getAction();
         }
 
-        if($this->isNotNull($this->requestdomain )) {
-            $params['requestdomain'] = $this->requestdomain ;
+        if($this->isNotNull($this->getRequestdomain())) {
+            $params['requestdomain'] = $this->getRequestdomain() ;
         }
 
-        if($this->isNotNull($this->wsrequestdomain)) {
-            $params['wsrequestdomain'] = $this->wsrequestdomain;
+        if($this->isNotNull($this->getWsrequestdomain())) {
+            $params['wsrequestdomain'] = $this->getWsrequestdomain();
         }
 
-        if($this->isNotNull($this->uploaddomain)) {
-            $params['uploaddomain'] = $this->uploaddomain;
+        if($this->isNotNull($this->getUploaddomain())) {
+            $params['uploaddomain'] = $this->getUploaddomain();
         }
 
-        if($this->isNotNull($this->downloaddomain)) {
-            $params['downloaddomain'] = $this->downloaddomain;
+        if($this->isNotNull($this->getDownloaddomain())) {
+            $params['downloaddomain'] = $this->getDownloaddomain();
         }
         $this->param_json = $params;
     }
+
+
 }

@@ -127,10 +127,4 @@ class Client extends Base {
     {
         $this->redirect_uri = $redirect_uri;
     }
-
-
-
-
-
-
 }

@@ -1,5 +1,6 @@
 <?php
 namespace Fangjia\Miniapps;
+
 abstract class Base
 {
     // API名
@@ -10,6 +11,20 @@ abstract class Base
     protected $isTrue = false;
 
     protected $isGet  = false;
+
+    // request 合法域名；当 action 是 get 时不需要此字段
+    private $requestDomain;
+    // socket 合法域名；当 action 是 get 时不需要此字段
+    private $wsRequestDomain;
+    // uploadFile 合法域名；当 action 是 get 时不需要此字段
+    private $uploadDomain;
+    // downloadFile 合法域名；当 action 是 get 时不需要此字段
+    private $downloadDomain;
+    // udp 合法域名；当 action 是 get 时不需要此字段
+    private $udpDomain;
+    // tcp 合法域名；当 action 是 get 时不需要此字段
+    private $tcpDomain;
+    private $action;
 
     // 是否是获取AccessToken
     public function isGetAccessToken()
@@ -33,7 +48,6 @@ abstract class Base
         return $this->param_json;
     }
 
-    protected function isNotNull($val) {
-        return !is_null($val);
-    }
+
+
 }
