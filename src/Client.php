@@ -13,7 +13,7 @@ class Client extends Base {
      * 微信请求地址
      * @var string
      */
-    private $_url           = "https://api.weixin.qq.com/";
+    private $_url = "https://api.weixin.qq.com/";
 
     /**
      * - 授权回调 URI(填写格式为https://xxx)。（插件版无该参数）
