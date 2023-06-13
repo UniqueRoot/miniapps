@@ -5,11 +5,40 @@ use Fangjia\Miniapps\Http\Request;
 
 class Client extends Base {
 
+    /**
+     * 微信请求地址
+     * @var string
+     */
     private $_url           = "https://api.weixin.qq.com/";
+
+    /**
+     * - 授权回调 URI(填写格式为https://xxx)。（插件版无该参数）
+     * - 管理员授权确认之后会自动跳转进入回调 URI，并在 URL 参数中返回授权码和过期时间(redirect_url?auth_code=xxx&expires_in=600)
+     * @var
+     */
     private $redirect_uri;
+
+    /**
+     * @var Request
+     */
     private $_request;
+
+    /**
+     * 第三方平台接口调用凭证component_access_token，该参数为 URL 参数，非 Body 参数。
+     * @var
+     */
     private $_accessToken;
+
+    /**
+     * 预授权码
+     * @var
+     */
     private $_pre_auth_code;
+
+    /**
+     * 小程序APPID
+     * @var
+     */
     private $appId;
 
 
@@ -47,14 +76,9 @@ class Client extends Base {
         $this->_pre_auth_code = $pre_auth_code;
     }
 
-    public function setState($state)
-    {
-        $this->_state = $state;
-    }
 
     /**
      * 获取授权地址
-     * @param string $appId
      * @return string
      */
     public function getAuthorizeUrl()
@@ -87,17 +111,10 @@ class Client extends Base {
     }
 
     /**
-     * @return mixed
-     */
-    public function getRedirectUri()
-    {
-        return $this->redirect_uri;
-    }
-
-    /**
+     * 设置响应地址
      * @param mixed $redirect_uri
      */
-    public function setRedirectUri($redirect_uri): void
+    public function setRedirectUri($redirect_uri)
     {
         $this->redirect_uri = $redirect_uri;
     }
