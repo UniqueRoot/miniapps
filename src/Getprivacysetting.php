@@ -1,6 +1,10 @@
 <?php
 namespace Fangjia\Miniapps;
 
+/**
+ * 获取小程序用户隐私保护指引
+ * 文档：https://developers.weixin.qq.com/doc/oplatform/openApi/OpenApiDoc/miniprogram-management/privacy-management/setPrivacySetting.html
+ */
 Class Getprivacysetting extends Base
 {
     // API名
@@ -8,15 +12,12 @@ Class Getprivacysetting extends Base
 
     protected $isTrue = true;
 
-    // 用户隐私保护指引的版本，1表示现网版本；2表示开发版。默认是2开发版。
-    public $privacy_ver   = null;
-
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->privacy_ver )) {
-            $params['privacy_ver'] = $this->privacy_ver ;
+        if(isNotNull($this->getPrivacyVer())) {
+            $params['privacy_ver'] = $this->getPrivacyVer();
         }
 
         $this->param_json = $params;

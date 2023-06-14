@@ -10,14 +10,13 @@ Class GetApiCreatePreauthcode extends Base
     // API名
     protected $methodName = "cgi-bin/component/api_create_preauthcode";
 
-    public $component_appid = null;
 
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->component_appid)) {
-            $params['component_appid'] = $this->component_appid;
+        if(isNotNull($this->getComponentAppid())) {
+            $params['component_appid'] = $this->getComponentAppid();
         }
 
         $this->param_json = $params;

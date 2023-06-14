@@ -1,6 +1,10 @@
 <?php
 namespace Fangjia\Miniapps;
 
+/**
+ * 获取体验版二维码
+ * 文档：https://developers.weixin.qq.com/doc/oplatform/openApi/OpenApiDoc/miniprogram-management/code-management/getTrialQRCode.html
+ */
 Class Getqrcode extends Base
 {
     // API名
@@ -9,14 +13,12 @@ Class Getqrcode extends Base
     protected $isTrue = true;
     protected $isGet  = true;
 
-    public $path = null;
-
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->path )) {
-            $params['path'] = $this->path ;
+        if(isNotNull($this->getPath())) {
+            $params['path'] = $this->getPath();
         }
 
         $this->param_json = $params;

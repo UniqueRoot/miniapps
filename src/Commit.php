@@ -12,29 +12,25 @@ Class Commit extends Base
 
     protected $isTrue = true;
 
-    public $template_id       = null;
-    public $user_version      = null;
-    public $user_desc         = null;
-    public $ext_json         = null;
 
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->template_id )) {
-            $params['template_id'] = $this->template_id ;
+        if(isNotNull($this->getTemplateId())) {
+            $params['template_id'] = $this->getTemplateId();
         }
 
-        if(isNotNull($this->user_version)) {
-            $params['user_version'] = $this->user_version;
+        if(isNotNull($this->getUserVersion())) {
+            $params['user_version'] = $this->getUserVersion();
         }
 
-        if(isNotNull($this->user_desc)) {
-            $params['user_desc'] = $this->user_desc;
+        if(isNotNull($this->getUserDesc())) {
+            $params['user_desc'] = $this->getUserDesc();
         }
 
-        if(isNotNull($this->ext_json)) {
-            $params['ext_json'] = $this->ext_json;
+        if(isNotNull($this->getExtJson())) {
+            $params['ext_json'] = $this->getExtJson();
         }
         $this->param_json = $params;
     }

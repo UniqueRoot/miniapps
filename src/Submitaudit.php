@@ -1,6 +1,11 @@
 <?php
 namespace Fangjia\Miniapps;
 
+/**
+ * 提交代码审核
+ * 在调用commit为小程序上传代码后，可以调用本接口，将上传的代码提交审核
+ * 文档：https://developers.weixin.qq.com/doc/oplatform/openApi/OpenApiDoc/miniprogram-management/code-management/submitAudit.html
+ */
 Class Submitaudit extends Base
 {
     // API名
@@ -8,19 +13,16 @@ Class Submitaudit extends Base
 
     protected $isTrue = true;
 
-    public $feedback_info       = null;
-    public $feedback_stuff      = null;
-
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->feedback_info )) {
-            $params['feedback_info'] = $this->feedback_info ;
+        if(isNotNull($this->getFeedbackInfo())) {
+            $params['feedback_info'] = $this->getFeedbackInfo();
         }
 
-        if(isNotNull($this->feedback_stuff)) {
-            $params['feedback_stuff'] = $this->feedback_stuff;
+        if(isNotNull($this->getFeedbackStuff())) {
+            $params['feedback_stuff'] = $this->getFeedbackStuff();
         }
 
 

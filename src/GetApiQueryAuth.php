@@ -12,20 +12,16 @@ Class GetApiQueryAuth extends Base
     // API名
     protected $methodName = "cgi-bin/component/api_query_auth";
 
-
-    public $component_appid = null;
-    public $authorization_code = null;
-
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->component_appid)) {
-            $params['component_appid'] = $this->component_appid;
+        if(isNotNull($this->getComponentAppid())) {
+            $params['component_appid'] = $this->getComponentAppid();
         }
 
-        if(isNotNull($this->authorization_code)) {
-            $params['authorization_code'] = $this->authorization_code;
+        if(isNotNull($this->getAuthorizationCode())) {
+            $params['authorization_code'] = $this->getAuthorizationCode();
         }
 
         $this->param_json = $params;

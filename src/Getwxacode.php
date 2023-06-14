@@ -1,6 +1,10 @@
 <?php
 namespace Fangjia\Miniapps;
 
+/**
+ * 获取小程序码
+ * 文档：https://developers.weixin.qq.com/miniprogram/dev/OpenApiDoc/qrcode-link/qr-code/getQRCode.html
+ */
 Class Getwxacode extends Base
 {
     // API名
@@ -8,34 +12,32 @@ Class Getwxacode extends Base
 
     protected $isTrue = true;
 
-    public $path       = null;
-    public $width      = null;
-    public $auto_color = null;
-    public $line_color = null;
-    public $is_hyaline = null;
-
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->path)) {
-            $params['path'] = $this->path;
+        if(isNotNull($this->getPath())) {
+            $params['path'] = $this->getPath();
         }
 
-        if(isNotNull($this->width)) {
-            $params['width'] = $this->width;
+        if(isNotNull($this->getWidth())) {
+            $params['width'] = $this->getWidth();
         }
 
-        if(isNotNull($this->auto_color)) {
-            $params['auto_color'] = $this->auto_color;
+        if(isNotNull($this->getAutoColor())) {
+            $params['auto_color'] = $this->getAutoColor();
         }
 
-        if(isNotNull($this->line_color)) {
-            $params['line_color'] = $this->line_color;
+        if(isNotNull($this->getLineColor())) {
+            $params['line_color'] = $this->getLineColor();
         }
 
-        if(isNotNull($this->is_hyaline)) {
-            $params['is_hyaline'] = $this->is_hyaline;
+        if(isNotNull($this->getIsHyaLine())) {
+            $params['is_hyaline'] = $this->getIsHyaLine();
+        }
+
+        if(isNotNull($this->getEnvVersion())) {
+            $params['env_version'] = $this->getEnvVersion();
         }
 
         $this->param_json = $params;

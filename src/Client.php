@@ -103,7 +103,7 @@ class Client extends Base {
 
         if(isset($param_json['component_verify_ticket'])) {
             $response =$this->_request->http_post_data($url, $param_json);
-        }else if($this->isGetAccessToken()){
+        }else if($this->isNeedAccessToken()){
             $url = $url."?access_token=".$this->getAccessToken();
             if($this->isGetRequesst()) {
                 $response = $this->_request->httpGet($url);

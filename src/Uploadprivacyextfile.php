@@ -1,6 +1,10 @@
 <?php
 namespace Fangjia\Miniapps;
 
+/**
+ * 上传小程序用户隐私保护指引
+ * 文档：https://developers.weixin.qq.com/doc/oplatform/openApi/OpenApiDoc/miniprogram-management/privacy-management/uploadPrivacySetting.html
+ */
 Class Uploadprivacyextfile extends Base
 {
     // API名
@@ -9,16 +13,12 @@ Class Uploadprivacyextfile extends Base
     protected $isTrue = true;
 
 
-    public $file   = null;
+
 
     protected function buildParams()
     {
         $params = array();
-
-        if(isNotNull($this->file )) {
-            $params['file'] = $this->file ;
-        }
-
+        $params['file'] = 'txt';
         $this->param_json = $params;
     }
 }

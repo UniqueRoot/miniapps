@@ -12,17 +12,13 @@ Class Bindtester extends Base
 
     protected $isTrue = true;
 
-    public $wechatid       = null;
-
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->wechatid )) {
-            $params['wechatid'] = $this->wechatid ;
+        if(isNotNull($this->getWechatId())) {
+            $params['wechatid'] = $this->getWechatId();
         }
-
-
         $this->param_json = $params;
     }
 }

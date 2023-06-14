@@ -3,6 +3,10 @@ namespace Fangjia\Miniapps;
 
 use Fangjia\Miniapps\Base;
 
+/**
+ * 配置小程序服务器域名
+ * 文档：https://developers.weixin.qq.com/doc/oplatform/openApi/OpenApiDoc/miniprogram-management/domain-management/modifyServerDomain.html
+ */
 Class Modifydomain extends Base
 {
     // API名

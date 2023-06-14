@@ -13,24 +13,22 @@ Class GetApiRefreshToken extends Base
     protected $methodName = "cgi-bin/component/api_authorizer_token";
 
 
-    public $component_appid = null;
-    public $authorizer_appid = null;
-    public $authorizer_refresh_token = null;
+
 
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->component_appid)) {
-            $params['component_appid'] = $this->component_appid;
+        if(isNotNull($this->getComponentAppid())) {
+            $params['component_appid'] = $this->getComponentAppid();
         }
 
-        if(isNotNull($this->authorizer_appid)) {
-            $params['authorizer_appid'] = $this->authorizer_appid;
+        if(isNotNull($this->getAuthorizerAppid())) {
+            $params['authorizer_appid'] = $this->getAuthorizerAppid();
         }
 
-        if(isNotNull($this->authorizer_refresh_token)) {
-            $params['authorizer_refresh_token'] = $this->authorizer_refresh_token;
+        if(isNotNull($this->getAuthorizerRefreshToken())) {
+            $params['authorizer_refresh_token'] = $this->getAuthorizerRefreshToken();
         }
 
         $this->param_json = $params;

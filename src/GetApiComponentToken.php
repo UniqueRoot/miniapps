@@ -11,24 +11,20 @@ Class GetApiComponentToken extends Base
     // API名
     protected $methodName = "cgi-bin/component/api_component_token";
 
-    public $component_appid = null;
-    public $component_appsecret = null;
-    public $component_verify_ticket = null;
-
     protected function buildParams()
     {
         $params = array();
 
-        if(isNotNull($this->component_appid)) {
-            $params['component_appid'] = $this->component_appid;
+        if(isNotNull($this->getComponentAppid())) {
+            $params['component_appid'] =$this->getComponentAppid();
         }
 
-        if(isNotNull($this->component_appsecret)) {
-            $params['component_appsecret'] = $this->component_appsecret;
+        if(isNotNull($this->getComponentAppSecret())) {
+            $params['component_appsecret'] = $this->getComponentAppSecret();
         }
 
-        if(isNotNull($this->component_verify_ticket)) {
-            $params['component_verify_ticket'] = $this->component_verify_ticket;
+        if(isNotNull($this->getComponentVerifyTicket())) {
+            $params['component_verify_ticket'] = $this->getComponentVerifyTicket();
         }
 
         $this->param_json = $params;
