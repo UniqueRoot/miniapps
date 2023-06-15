@@ -12,9 +12,6 @@ Class Uploadprivacyextfile extends Base
 
     protected $isTrue = true;
 
-
-
-
     protected function buildParams()
     {
         $params = array();
