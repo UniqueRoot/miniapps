@@ -21,8 +21,6 @@ Class Unbindtester extends Base
         if(isNotNull($this->getWechatId())) {
             $params['wechatid'] = $this->getWechatId();
         }
-
-
         $this->param_json = $params;
     }
 }

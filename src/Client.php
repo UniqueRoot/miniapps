@@ -46,9 +46,8 @@ class Client extends Base {
     private $appId;
 
 
-    public function __construct($appId)
+    public function __construct()
     {
-        $this->appId = $appId;
         $this->_request = new Request();
     }
 
